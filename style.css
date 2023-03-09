@@ -1,0 +1,552 @@
+@font-face {
+    font-family: "blazed";
+    src: url(assets/fonts/mandalore.ttf)
+}
+
+@font-face {
+    font-family: "queen";
+    src: url(assets/fonts/A-Space_Thin\ Demo.otf);
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+                    /* HEADER */
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2vh 5% 2vh 3%;
+    border: solid black 1px;
+}
+
+/* On style le nom dans le header */
+header p {
+    font-family: "blazed";
+    /* background: linear-gradient(to right, #FC466B 0%, #3F5EFB 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; */
+    color: rgb(245, 229, 211);
+    font-size: 3rem;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.283);
+    line-height: 45px;
+    transition: 0.4s;
+}
+
+header nav{
+    font-family: "queen";
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav a{
+    color: rgb(245, 229, 211);
+    padding: 15px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.567);
+}
+
+header nav a:hover{
+    border-bottom: solid rgb(245, 229, 211) 3px;
+}
+
+/* mise en place du menu_burger */
+
+.menu_burger{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 27px;
+    right: 40px;
+    z-index: 200;
+}
+
+div.menu_burger:hover{
+    cursor: pointer;
+}
+
+.spanBurger{
+    display: none;
+    width: 30px;
+    height: 3px;
+    background-color: rgb(245, 229, 211);
+    margin: 4px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1250px){
+    nav{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.422);
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+        z-index: 100;
+        margin-left: -100%;
+        transition: 0.4s;
+    }
+    .setMenu{
+        margin-left: 0;
+        /* position: fixed; */
+    }
+    .topSpanBye{
+        transform: rotate(45deg);
+        position: absolute;
+    }
+    .middleSpanBye{
+        visibility: hidden;
+        transition: 0s;
+    }
+    .bottomSpanBye{
+        transform: rotate(-45deg);
+        position: absolute;
+    }
+    .spanBurger{
+        display: block;
+        top: 12px;
+        transition: 0.4s;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    header p{
+        font-size: 2rem;
+        transition: 0.4s;
+    }
+}
+
+
+                        /* BODY */
+
+body{
+    font-family: "queen";
+    color: rgb(245, 229, 211);
+    background: url(assets/moon-sombre.jpg) fixed center/cover no-repeat;
+    height: auto;
+    width: 100%;
+}
+
+/* SECTION INTRO */
+
+#introduction{
+    height: 90vh;
+}
+
+#introduction h1{
+    font-family: "blazed";
+    color: rgb(245, 229, 211);
+    font-size: 4rem;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding-top: 30vh;
+}
+
+#introduction p{
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 6vh;
+}
+
+/* EXPERTISE */
+
+#expertise{
+    /* background-color: rgba(255, 255, 255, 0.141); */
+    width: 80%;
+    height: auto;
+    margin: 5vh auto 15vh auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "poppins";
+}
+
+@media screen and (max-width: 1323px){
+    #expertise{
+        flex-direction: column;
+    }
+    #competences{
+        margin-bottom: 10vh;
+        margin-top: 5vh;
+    }
+}
+
+#competences{
+    background-color: rgba(255, 255, 255, 0.063);
+    width: 50%;
+    padding: 40px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(141, 230, 255, 0.218);
+}
+
+#introCompetences{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+#introCompetences h2{
+    padding-bottom: 2vh;
+    font-size: 1.8rem;
+    font-family: "queen";
+}
+
+/* Graph Competences */
+
+#graphCompetences{
+    /* background-color: #D9D9D9;
+    color: black; */
+    padding-left: 15px;
+}
+
+#graphCompetences h3{
+    text-align: center;
+    margin-top: 3vh;
+    font-family: "queen";
+    font-weight: 700;
+}
+
+/* Ligne de competences */
+
+.ligneCompetence{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    position: relative;
+}
+
+#graphCompetences p{
+    padding-left: 10px;
+    display: inline-block;
+}
+
+/* design sabres lasers */
+
+.poignee{
+    width: 70px;
+    left: 150px;
+    position: absolute;
+    top: 2px;
+}
+
+.lame{
+    height: 20px;
+    position: absolute;
+    left:220px;
+}
+
+#lame1{
+    width: 70px;
+}
+
+#lame2{
+    width: 150px;
+}
+
+#lame3{
+    width: 300px;
+}
+
+#lame4{
+    width: 280px;
+}
+
+#lame5{
+    width: 160px;
+}
+
+@media screen and (max-width: 1430px){
+    #lame1{
+        width: 10%;
+    }
+    #lame2{
+        width: 22%;
+    }
+    #lame3{
+        width: 44%;
+    }
+    #lame4{
+        width: 40%;
+    }
+    #lame5{
+        width: 24%;
+    }
+    .poignee{
+        left: 110px;
+    }
+    .lame{
+        left: 180px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    #competences {
+        width: 90%;
+    }
+}
+
+/* CV */
+
+#CV{
+    width: 45%;
+    height: 80vh;
+    /* background-color: blueviolet; */
+}
+
+#screenCV{
+    width: 450px;
+    margin: auto;
+    display: block;
+    margin-top: 8vh;
+    box-shadow: 0 0 20px rgba(141, 230, 255, 0.218);
+    border-radius: 15px;
+}
+
+#dlcv{
+    margin: 3vh auto;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    display: block;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.063);
+    color: white;
+    font-family: "poppins";
+    font-size: 1.2rem;
+    border: none;
+}
+
+#dlcv:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.182);
+    transition: 0.4s;
+    box-shadow: 0 0 20px rgba(141, 230, 255, 0.218);
+    text-shadow: 0 0 20px rgba(64, 214, 255, 0.458) ;
+}
+
+#dlcv a{
+    color: white;
+}
+
+@media screen and (max-width: 1323px){
+    #CV{
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #screenCV{
+        width: 90%;
+    }
+}
+
+/* Passons à la section projets */
+
+#projets{
+    font-family: "poppins";
+}
+
+#separationProjet{
+    background: url(assets/fond-lignes-abstraites-fines-vagues_527309-521.jpg) fixed center/cover no-repeat;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: inset 0 0 11px rgba(0, 0, 0, 0.394);
+}
+
+#separationProjet h2{
+    color: black;
+    font-size: 3rem;
+    font-family: "blazed";
+}
+
+#introProjet{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10vh 10px;
+    font-size: 1.2rem;
+}
+
+#dispositionProjet{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: auto;
+}
+
+.divProjet{
+    width: 500px;
+    height: 500px;
+    /* background-color: rgba(255, 255, 255, 0.129); */
+    margin: 5vh auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.153);
+}
+
+.divProjet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+}
+
+.divProjet h2{
+    padding: 20px;
+    text-decoration: underline;
+}
+
+.divProjet img{
+    width: 60%;
+    border-radius: 15px;
+}
+
+.divProjet a{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.divProjet a:hover img{
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+    transform: scale(1.02);
+    transition: 0.25s;
+}
+
+.divProjet p{
+    padding: 20px;
+    text-align: center;
+    width: 70%;
+}
+
+@media screen and (max-width: 1250px) {
+    #dispositionProjet{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+
+/* API */
+
+#recherche{
+    margin: 5vh 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+
+#recherche input{
+    width: 40%;
+    height: 4vh;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.169);
+    padding: 10px;
+    font-family: "poppins";
+    font-size: 1.1rem;
+    margin: 1vh 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#recherche button{
+    height: 4vh;
+    border-radius: 8px;
+    width: 20%;
+    padding: 10px;
+    font-family: "poppins";
+    font-size: 1.1rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px rgb(255 255 255 / 20%);
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+}
+
+#recherche button:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.155);
+    transition: 0.4s;
+}
+
+#monApi{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin: auto;
+}
+
+.card {
+    font-family: "poppins";
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 3px 10px 2px rgb(201 201 201 / 21%);
+    border-radius: 10px;
+    padding: 15px;
+    width: 75%;
+    margin: 20px;
+    background-color: rgb(38 38 38 / 9%);
+    backdrop-filter: blur(2px);
+}
+
+.card p{
+    text-align: center;
+    padding: 10px;
+}
+
+.info{
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.imgAPI{
+    width: 200px;
+}

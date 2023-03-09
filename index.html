@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Matthieu BRUNET-DEBAINES</title>
+  </head>
+  <body>
+    <!-- Construction du header responsive avec menu burger (small screen) et deplacement au scrool en large screen -->
+
+    <header>
+      <p>Matthieu BRUNET</p>
+
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projets">Projets</a>
+        <a href="#">A propos</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="menu_burger">
+        <span class="spanBurger" class="topSpan"></span>
+        <span class="spanBurger" class="middleSpan"></span>
+        <span class="spanBurger" class="bottomSpan"></span>
+      </div>
+    </header>
+
+    <body>
+      <!-- Première section qui prend toute la page, épurée: nom, courte présentation -->
+
+      <section id="introduction">
+        <h1>Matthieu BRUNET-DEBAINES</h1>
+        <p>Développeur front-end web et web mobile</p>
+      </section>
+
+      <!-- Deuxième section (au scroll) sur l'expertise -->
+
+      <section id="expertise">
+        <!-- <!>insérer les logos des langages<!> -->
+        <!-- <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+                <li>SQL</li>
+                <li>FIGMA</li>
+            </ul> -->
+
+        <div id="competences">
+
+          <div id="introCompetences">
+            <h2>Compétences</h2>
+            <p>
+              Elles sont en constante amélioration car pour moi la joie de ce
+              métier est de pouvoir apprendre tous les jours avec passion et
+              curiosité
+            </p>
+          </div>
+
+          <div id="graphCompetences">
+            <h3>Back-end</h3>
+                <div id="php" class="ligneCompetence">
+                    <p>PHP</p>
+                    <img src="assets/poignée-sabre.png" alt="poignée sabre" id="poignee1" class="poignee" />
+                    <img src="assets/lame-sabre.png" alt="lame sabre" id="lame1" class="lame" />
+                </div>
+                <div id="sql" class="ligneCompetence">
+                    <p>SQL</p>
+                    <img src="assets/poignée-sabre.png" alt="poignée sabre" id="poignee2" class="poignee"/>
+                    <img src="assets/lame-sabre.png" alt="lame sabre" id="lame2" class="lame"  />
+                </div>
+            <h3>Front-end</h3>
+                <div id="html" class="ligneCompetence">
+                    <p>HTML</p>
+                    <img src="assets/poignée-sabre.png" alt="poignée sabre" id="poignee3" class="poignee"/>
+                    <img src="assets/lame-sabre.png" alt="lame sabre" id="lame3" class="lame" />
+                </div>
+                <div id="css" class="ligneCompetence">
+                    <p>CSS</p>
+                    <img src="assets/poignée-sabre.png" alt="poignée sabre" id="poignee4" class="poignee"/>
+                    <img src="assets/lame-sabre.png" alt="lame sabre" id="lame4" class="lame" />
+                </div>
+                <div id="js" class="ligneCompetence">
+                    <p>JAVASCRIPT</p>
+                    <img src="assets/poignée-sabre.png" alt="poignée sabre" id="poignee5" class="poignee"/>
+                    <img src="assets/lame-sabre.png" alt="lame sabre" id="lame5" class="lame" />
+                </div>
+          </div>
+
+        </div>
+
+        <div id="CV">
+            <img src="assets/cvimg.png" alt="mon cv" id="screenCV">
+
+            <button id="dlcv"><a href="assets/CV v3.docx">Téléchargez CV</a></button>
+        </div>
+
+      </section>
+
+      <!-- Troisième section (scroll) Projets -->
+      <!-- format grille, effet hover de grossissement -->
+      <!-- projets dans des boxs -->
+      <section id="projets">
+
+        <div id="separationProjet">
+            <h2>Projets</h2>
+        </div>
+
+        <p id="introProjet">Voici une série de quatres projets que j'ai réalisé dans le cadre de ma formation de développeur web. N'hésitez pas à cliquer dessus afin de les visiter.</p>
+
+        <div id="dispositionProjet">
+
+            <div class="divProjet" id="galaxy">
+            <h2>Galaxy</h2>
+            <img src="assets/galaxy.png" alt="projet galaxy">
+            <p>Projet web qui vous servira de guide lors de votre conquete spatiale</p>
+            </div>
+
+            <div class="divProjet" id="eternal">
+            <h2>Eternal Descent</h2>
+            <a href="https://jonathan-auber.github.io/eternal-descent/" target="_blank"><img src="assets/eternal.png" alt="eternal descent le jeu"></a>
+            <p>Projet web de groupe. Nous avons créée un site vitrine de jeu vidéo fictif annoncé mais non sorti</p>
+            </div>
+
+            <!-- à créer -->
+            <div class="divProjet">
+            <h2>CineCanap</h2>
+            <a href="api.html"><img src="assets/cinecanap.png" alt="cinecanap"></a>
+            <p>Projet web d'integration d'API'. Vous pouvez rechercher un film</p>
+            </div>
+
+            <!-- cette div renferme le secret utlime de l'API
+            <div class="divProjet">
+            <h2>Projet API</h2>
+            </div> -->
+
+            <!-- à finir -->
+            <div class="divProjet">
+            <h2>Crossfit</h2>
+            </div>
+
+        </div>    
+      </section>
+
+      <!-- Quatrième section: A propos => Ma grosse tête, mon parcours -->
+
+      <section id="aboutMe"></section>
+
+      <script src="app.js"></script>
+    </body>
+  </body>
+</html>
