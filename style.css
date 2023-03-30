@@ -53,7 +53,7 @@ header p {
 }
 
 header nav{
-    font-family: "queen";
+    font-family: "poppins";
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -61,10 +61,11 @@ header nav{
 header nav a{
     color: rgb(245, 229, 211);
     padding: 15px;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.567);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.332);
 }
 
 header nav a:hover{
+    text-shadow: 0 0 15px rgb(30, 30, 255);
     border-bottom: solid rgb(245, 229, 211) 3px;
 }
 
@@ -75,7 +76,7 @@ header nav a:hover{
     height: 35px;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 27px;
     right: 40px;
     z-index: 200;
@@ -96,7 +97,7 @@ div.menu_burger:hover{
 
 @media screen and (max-width: 1250px){
     nav{
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -121,7 +122,11 @@ div.menu_burger:hover{
     .topSpanBye{
         transform: rotate(45deg);
         position: absolute;
-    }
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+}
     .middleSpanBye{
         visibility: hidden;
         transition: 0s;
@@ -222,6 +227,12 @@ body{
     font-family: "queen";
 }
 
+@media screen and (max-width: 500px) {
+    #introCompetences h2{
+    font-size: 1.4rem;
+    }
+}
+
 /* Graph Competences */
 
 #graphCompetences{
@@ -315,6 +326,24 @@ body{
     }
 }
 
+@media screen and (max-width: 515px) {
+    #lame1{
+        width: 8%;
+    }
+    #lame2{
+        width: 11%;
+    }
+    #lame3{
+        width: 22%;
+    }
+    #lame4{
+        width: 20%;
+    }
+    #lame5{
+        width: 12%;
+    }
+}
+
 /* CV */
 
 #CV{
@@ -346,6 +375,12 @@ body{
     border: none;
 }
 
+@media screen and (max-width: 400px){
+    #dlcv{
+        width: 100%;
+    }
+}
+
 #dlcv:hover{
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.182);
@@ -374,6 +409,7 @@ body{
 
 #projets{
     font-family: "poppins";
+    padding-bottom: 10vh;
 }
 
 #separationProjet{
@@ -415,6 +451,13 @@ body{
     display: block;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.153);
+}
+
+@media screen and (max-width: 580px) {
+    .divProjet{
+        width: 100%;
+        margin: 2vh auto;
+    }
 }
 
 .divProjet{
@@ -549,4 +592,191 @@ body{
 
 .imgAPI{
     width: 200px;
+}
+
+/* A PROPOS */
+
+#aboutMe{
+    background-color: white;
+    width: 100%;
+    color: black;
+    font-family: "poppins";
+}
+
+#aboutMe h2{
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    padding: 5vh;
+    background: url(assets/fond-lignes-abstraites-fines-vagues_527309-521.jpg) fixed center/cover no-repeat;
+
+}
+
+#describe_me{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 5vh auto 0 auto;
+    padding: 10vh;
+}
+
+#describe_me p{
+    display: block;
+    width: 50%;
+    text-align: justify;
+    font-size: 1.25rem;
+}
+
+#picofme{
+    width: 250px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+@media screen and (max-width: 1410px) {
+    #describe_me{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #describe_me{
+        padding-right: 0;
+        padding-left: 0;
+        width: 90%;
+        flex-direction: column;
+        padding-top: 1vh;
+    }
+
+    #describe_me p{
+        width: 100%;
+        font-size: 1rem;
+        padding-bottom: 4vh;
+    }
+
+    #picofme{
+        /* float: right; */
+    }
+}
+
+/* Bouton retour haut de page */
+
+#backTop{
+    width: 250px;
+    margin: 2vh auto;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.362);
+    display: block;
+    padding: 10px 0;
+}
+
+#backTop a{
+    font-family: "poppins";
+}
+
+#comble{
+    height: 5vh;
+    width: 100%;
+    background-color: white;
+}
+
+/* CONTACT */
+
+#contactMe{
+    height: 90vh;
+    color: white;
+    font-family: "poppins";
+}
+
+#contactMe h2{
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    padding: 5vh;
+    background: url(assets/fond-lignes-abstraites-fines-vagues_527309-521.jpg) fixed center/cover no-repeat;
+    color: black;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 50%;
+    margin: 10vh auto;
+    border-top: solid white 2px;
+    padding: 50px 0 0 0;
+}
+
+figcaption{
+    color: white;
+    font-size: 1.3rem;
+}
+
+.figureReseaux{
+    margin: 2vh 0;
+}
+
+.figureReseaux a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.figureReseaux a:hover{
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.239);
+    border-radius: 30px;
+    padding: 0 10px 0 0;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.socialImg{
+    width: 50px;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .contacts{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .contacts{
+        flex-direction: column
+    };
+}
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    height: 5vh;
+}
+
+footer a{
+    color: white;
+    font-family: "poppins";
+    width: 160px;
+    text-align: center;
+    margin: 2vh auto;
+    display: block;
+    border-bottom: solid white 2px;
+    border-top: solid white 1px;
+    padding-bottom: 0.75vh;
+    padding-top: 0.75vh;
 }

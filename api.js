@@ -50,25 +50,3 @@ fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q='+texte.valu
 })
 
 
-
-
-// fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=%27'+ texte.value, options)
-// .then(response => response.json())      
-// .then((data) => {     
-//     const list = data.d;      
-//     list.map((item) => {       
-//         const name = item.l;       
-//         const poster = item.i.imageUrl;       
-//         const year = item.y;       
-//         const rank = item.rank;        
-//         const title =item.q;       
-//         const actor =item.s;       
-//         const movie = `             
-//         <li>             
-//         <img src="${poster}">                 
-//         <h2>genre:${title}<h2>                 
-//         <h2>Titre :${name}</h2>    
-//         `             
-//         })
-//     })  
-// )

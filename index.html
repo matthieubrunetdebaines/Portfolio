@@ -10,15 +10,15 @@
   <body>
     <!-- Construction du header responsive avec menu burger (small screen) et deplacement au scrool en large screen -->
 
-    <header>
+    <header id="header">
       <p>Matthieu BRUNET</p>
 
       <nav class="nav">
         <a href="index.html">Accueil</a>
         <a href="#expertise">Expertise</a>
         <a href="#projets">Projets</a>
-        <a href="#">A propos</a>
-        <a href="#">Contact</a>
+        <a href="#aboutMe">A propos</a>
+        <a href="#contactMe">Contact</a>
       </nav>
 
       <div class="menu_burger">
@@ -71,6 +71,11 @@
                     <img src="assets/poignée-sabre.png" alt="poignée sabre" id="poignee2" class="poignee"/>
                     <img src="assets/lame-sabre.png" alt="lame sabre" id="lame2" class="lame"  />
                 </div>
+                <div id="node" class="ligneCompetence">
+                  <p>NodeJs</p>
+                  <img src="assets/poignée-sabre.png" alt="poignée sabre" id="poignee2" class="poignee"/>
+                  <img src="assets/lame-sabre.png" alt="lame sabre" id="lame2" class="lame"  />
+              </div>
             <h3>Front-end</h3>
                 <div id="html" class="ligneCompetence">
                     <p>HTML</p>
@@ -120,14 +125,18 @@
 
             <div class="divProjet" id="eternal">
             <h2>Eternal Descent</h2>
-            <a href="https://jonathan-auber.github.io/eternal-descent/" target="_blank"><img src="assets/eternal.png" alt="eternal descent le jeu"></a>
+            <a href="https://jonathan-auber.github.io/eternal-descent/" target="_blank">
+              <img src="assets/eternal.png" alt="eternal descent le jeu">
+            </a>
             <p>Projet web de groupe. Nous avons créée un site vitrine de jeu vidéo fictif annoncé mais non sorti</p>
             </div>
 
             <!-- à créer -->
             <div class="divProjet">
             <h2>CineCanap</h2>
-            <a href="api.html"><img src="assets/cinecanap.png" alt="cinecanap"></a>
+            <a href="api.html">
+              <img src="assets/cinecanap.png" alt="cinecanap">
+            </a>
             <p>Projet web d'integration d'API'. Vous pouvez rechercher un film</p>
             </div>
 
@@ -138,7 +147,10 @@
 
             <!-- à finir -->
             <div class="divProjet">
-            <h2>Crossfit</h2>
+            <h2>TodoList</h2>
+            <a href="http://localhost/Todolist/" target="_blank">
+              <img src="assets/TodoList.png" alt="todolist">
+            </a>
             </div>
 
         </div>    
@@ -146,7 +158,74 @@
 
       <!-- Quatrième section: A propos => Ma grosse tête, mon parcours -->
 
-      <section id="aboutMe"></section>
+      <section id="aboutMe">
+
+        <h2>A propos</h2>
+        
+        <div id="describe_me">
+            <p>Hey, je suis Matthieu Brunet-Debaines et j'utilise bdmat comme pseudo pour les réseaux sociaux. 
+            </br>Je suis apprenti développeur web et plus précisement je vise le full-stack. 
+            </br>Passionné par le sport, la science-fiction et la découverte du monde qui nous entoure, j'aime réaliser des projets autour de ces thèmes. 
+            </br>Je suis curieux d'apprendre plus sur les nouvelles technologies et le creative coding.</p>
+
+            <img src="assets/imgportf.jpg" alt="me_myself_and_i" id="picofme">
+        </div>
+
+        <button id="backTop">
+          <a href="#header">Revenir en haut de la page</a>
+        </button>
+
+        <div id="comble"></div>
+
+      </section>
+
+      <section id="contactMe">
+
+        <h2>Contact</h2>
+
+        <div class="contacts">
+
+          <div class="mail">
+            <figure class="figureReseaux">
+              <a href="mailto:matbrudeb@gmail.com">
+                <img src="assets/icon/email.png" alt="email" class="socialImg">
+                <figcaption>E-mail</figcaption>
+              </a>
+            </figure>
+          </div>
+          
+          <div class="reseaux">
+            <figure class="figureReseaux">
+              <a href="https://www.linkedin.com/in/matthieu-brunet-debaines-7a6035219/" target="_blank">
+                <img src="assets/icon/linkedin.png" alt="linkedin" class="socialImg">
+                <figcaption>Linkedin</figcaption>
+              </a>
+            </figure>
+            
+            <figure class="figureReseaux">
+              <a href="https://github.com/matthieubrunetdebaines"  target="_blank">
+                <img src="assets/icon/github.png" alt="github" class="socialImg">
+                <figcaption>GitHub</figcaption>
+              </a>
+            </figure>
+            
+            <figure class="figureReseaux">
+              <a href="https://www.instagram.com/bdmat/"  target="_blank">
+                <img src="assets/icon/logo-instagram.png" alt="instagram" class="socialImg">
+                <figcaption>Instagram</figcaption>
+              </a>
+            </figure>
+          </div>
+
+        </div>
+
+
+      </section>
+
+      <footer>
+        <a href="#">Mentions légales</a>
+      </footer>
+
 
       <script src="app.js"></script>
     </body>
