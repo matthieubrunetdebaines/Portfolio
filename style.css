@@ -82,6 +82,7 @@ header nav a:hover{
     z-index: 200;
 }
 
+
 div.menu_burger:hover{
     cursor: pointer;
 }
@@ -126,20 +127,32 @@ div.menu_burger:hover{
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         -o-transform: rotate(45deg);
-}
-    .middleSpanBye{
-        visibility: hidden;
-        transition: 0s;
     }
+    .middleSpanBye{
+        transition: 0.1s;
+        visibility: hidden;
+        -webkit-transition: 0.1s;
+        -moz-transition: 0.1s;
+        -ms-transition: 0.1s;
+        -o-transition: 0.1s;
+}
     .bottomSpanBye{
         transform: rotate(-45deg);
         position: absolute;
-    }
+        -webkit-transform;
+        -moz-transform;
+        -ms-transform;
+        -o-transform;
+}
     .spanBurger{
         display: block;
         top: 12px;
         transition: 0.4s;
     }
+    .change_color{
+    background-color: black;
+}
+
 }
 
 @media screen and (max-width : 600px) {
